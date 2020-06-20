@@ -1,6 +1,10 @@
 language: python
 python:
   - 3.8
+services:
+  postgresql
+addons:
+  postgresql: '10'
 env:
   global:
     - PIPENV_IN_PROJECT=1
@@ -9,6 +13,8 @@ install:
   - pip install -q pipenv
   - pipenv sync -d
   - cp contrib/env_sample .env
+before_script:
+  - psql -c "CREATE DATABASE testedb;" -U postgres
 script:
   - pipenv run flake8 .
   - pipenv run pytest --cov=pypro
