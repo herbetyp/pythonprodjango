@@ -151,7 +151,6 @@ if AWS_ACCESS_KEY_ID:
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
     COLLECTFAST_ENABLED = True
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
     # Upload media folder
