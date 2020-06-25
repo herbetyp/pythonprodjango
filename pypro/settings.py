@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from typing import cast
 import dj_database_url
 from decouple import config, Csv
 from functools import partial
@@ -119,6 +120,11 @@ USE_TZ = True
 # Custom User
 AUTH_USER_MODEL = 'core.User'
 
+# Debug toolbar configuration
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+
 # Development
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -127,6 +133,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 COLLECTFAST_ENABLED = False
+
+INTERNAL_IPS = config('INTERNAL_IPS', default='127.0.0.1', cast=Csv())
 
 # S3 configuration
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
