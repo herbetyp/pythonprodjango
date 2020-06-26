@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
-    'core',
+    'pypro.core',
 ]
 
 MIDDLEWARE = [
