@@ -18,8 +18,9 @@ from django.urls import include, path
 from pypro.core.views import home
 from django.conf import settings
 
-urlpatterns = [path('admin/', admin.site.urls), path('', home)]
+urlpatterns = [path('admin/', admin.site.urls), path('', home, name='home')]
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))
