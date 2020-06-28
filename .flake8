@@ -30,5 +30,3 @@ exclude =
     *backup/*
     .locales
     *static/*
-
-format = pylint
