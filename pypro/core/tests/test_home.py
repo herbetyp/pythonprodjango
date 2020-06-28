@@ -1,12 +1,11 @@
 from pypro.django_assertions import assert_contains
-from django.test import Client
 import pytest
 from django.urls import reverse
 
 
 @pytest.fixture
-def response(client: Client):
-    resp = client.get(reverse('home'))
+def response(client):
+    resp = client.get(reverse('core:home'))
     return resp
 
 
@@ -19,4 +18,4 @@ def test_title(response):
 
 
 def test_home_link(response):
-    assert_contains(response, f'href="{reverse("home")}">Python Pro</a>')
+    assert_contains(response, f'href="{reverse("core:home")}">Python Pro</a>')
