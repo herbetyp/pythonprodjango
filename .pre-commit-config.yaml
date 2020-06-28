@@ -11,11 +11,11 @@ repos:
     hooks:
       - id: flake8
         name: Flake8
-        entry: flake8 --config=.flake8 --format
+        entry: flake8 --config=.flake8
         language: python
 
   - repo: git://github.com/pre-commit/pre-commit-hooks
-    sha: master
+    rev: v3.1.0
     hooks:
       - id: trailing-whitespace
       - id: check-merge-conflict
