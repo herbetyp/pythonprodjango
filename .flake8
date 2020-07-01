@@ -11,6 +11,7 @@ exclude =
     README.md
     requirements*
     .gitlab-ci.yml
+    *.github/*
     *fixtures*
     *locale/*
     .gitignore
