@@ -11,10 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import dj_database_url
-from decouple import config, Csv
 from functools import partial
+
+import dj_database_url
 import sentry_sdk
+from decouple import Csv, config
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'pypro.core',
+    'pypro.aperitivos',
 ]
 
 MIDDLEWARE = [
