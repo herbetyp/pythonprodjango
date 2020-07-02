@@ -7,11 +7,11 @@ repos:
         args: [-S]
         language_version: python3.7
 
-  - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v4.3.21
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.3.0
     hooks:
-      - id: isort
-        name: Isort
+      - id: reorder-python-imports
+        name: Format Imports
 
   - repo: local
     hooks:
