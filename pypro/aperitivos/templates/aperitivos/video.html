@@ -10,9 +10,9 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <h1>{{ video.titulo }}</h1>
+                <h1>{{ video.titulo|default:'Faltando o título' }}</h1>
                 <div class="mt-3 mb-5">
-                    <iframe src="https://player.vimeo.com/video/{{ video.vimeo_id}}" width="640" height="360" frameborder="0"
+                    <iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}" width="640" height="360" frameborder="0"
                         allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
