@@ -1,6 +1,7 @@
-from pypro.django_assertions import assert_contains
 import pytest
 from django.urls import reverse
+
+from pypro.django_assertions import assert_contains
 
 
 @pytest.fixture
@@ -14,7 +15,7 @@ def test_status_code(response):
 
 
 def test_title(response):
-    assert_contains(response, '<title>Python Pro</title>')
+    assert_contains(response, '<title>Python Pro - Home</title>')
 
 
 def test_home_link(response):
