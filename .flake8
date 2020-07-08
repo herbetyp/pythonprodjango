@@ -31,3 +31,4 @@ exclude =
     *backup/*
     .locales
     *static/*
+    *docker-compose*
