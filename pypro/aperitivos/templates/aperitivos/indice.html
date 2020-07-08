@@ -11,14 +11,14 @@
     <div class="row">
         <div class="col-md-12">
             {% if videos %}
-                <h1>Lista de vídeos aperitivos</h1>
+            <h1>Lista de vídeos aperitivos</h1>
             {% endif %}
             <ol>
                 {% for video in videos %}
-                        <li>{{ video.titulo|default:'Faltando o título' }}
-                        <a class="ml-2" href="{% url 'aperitivos:video' slug=video.slug %}">link</a></li>
-                    {% empty %}
-                        <h4><strong>Não</strong> foi encontrado nenhum vídeo</h4>
+                   <li><a class="ml-2" href="{{ video.get_absolute_url }}">
+                   {{ video.titulo|default:'Faltando o título' }}</a></li>
+                {% empty %}
+                    <h4><strong>Não</strong> foi encontrado nenhum vídeo</h4>
                 {% endfor %}
             </ol>
         </div>

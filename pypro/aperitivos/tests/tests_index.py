@@ -16,5 +16,11 @@ def test_status_code_indice(resp_indice):
 @pytest.mark.parametrize(
     'titulo', ['Vídeo Aperitivo: Motivação', 'Instalação no Windows']
 )
-def test_title_video_indice(resp_indice, titulo):
+def test_titulo_video(resp_indice, titulo):
     assert_contains(resp_indice, titulo)
+
+
+@pytest.mark.parametrize('slug', ['motivacao', 'instalacao-windows'])
+def test_link_video(resp_indice, slug):
+    video_link = reverse('aperitivos:video', args=[slug])
+    assert_contains(resp_indice, f'href="{video_link}"')
