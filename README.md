@@ -1,7 +1,9 @@
-[![Build Status](https://travis-ci.org/Pbezerra-dev/pythonprodjango.svg?branch=master)](https://travis-ci.org/Pbezerra-dev/pythonprodjango)
-[![codecov](https://codecov.io/gh/Pbezerra-dev/pythonprodjango/branch/master/graph/badge.svg)](https://codecov.io/gh/Pbezerra-dev/pythonprodjango)
+![Django Project](https://github.com/Pbezerra-dev/pythonprodjango/workflows/Django%20Project/badge.svg)
+[![Codecov](https://codecov.io/gh/Pbezerra-dev/pythonprodjango/branch/master/graph/badge.svg)](https://codecov.io/gh/Pbezerra-dev/pythonprodjango)
 [![Python 3](https://pyup.io/repos/github/Pbezerra-dev/pythonprodjango/python-3-shield.svg)](https://pyup.io/repos/github/Pbezerra-dev/pythonprodjango/)
 [![Python 3](https://pyup.io/repos/github/Pbezerra-dev/pythonprodjango/python-3-shield.svg)](https://pyup.io/repos/github/Pbezerra-dev/pythonprodjango/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 
 ># Módulo de Django PythonPro
 
