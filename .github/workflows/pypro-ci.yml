@@ -1,4 +1,4 @@
-name: Django Project
+name: CI
 
 on: [pull_request]
 
