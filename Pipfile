@@ -10,6 +10,7 @@ pytest-django = "*"
 pytest-cov = "*"
 codecov = "*"
 pre-commit = "*"
+model-bakery = "*"
 
 [packages]
 django = "*"
