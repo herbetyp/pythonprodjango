@@ -8,5 +8,3 @@ coverage:
       default:
         enabled: yes
         target: 100%
-
-comment: false
