@@ -9,13 +9,13 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
 import os
 from functools import partial
 
 import dj_database_url
 import sentry_sdk
-from decouple import Csv, config
+from decouple import config
+from decouple import Csv
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pypro.core',
     'pypro.aperitivos',
+    'pypro.modulos',
 ]
 
 MIDDLEWARE = [
@@ -85,18 +86,14 @@ WSGI_APPLICATION = 'pypro.wsgi.application'
 default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 parse_database = partial(dj_database_url.parse, conn_max_age=600)
 
-DATABASES = {
-    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
-}
+DATABASES = {'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)}
 
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
     {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
@@ -176,6 +173,4 @@ if AWS_ACCESS_KEY_ID:
 # Sentry configutation
 SENTRY_DSN = config('SENTRY_DSN', default=None)
 if SENTRY_DSN:
-    sentry_sdk.init(
-        dsn=SENTRY_DSN, integrations=[DjangoIntegration()], send_default_pii=True
-    )
+    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()], send_default_pii=True)
