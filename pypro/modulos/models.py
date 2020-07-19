@@ -1,5 +1,5 @@
 from django.db import models
 
 
-class Modulos(models.Model):
+class Modulo(models.Model):
     titulo = models.CharField(max_length=64)
