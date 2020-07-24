@@ -39,12 +39,12 @@
 						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Módulos
 					</a>
-					{% for modulo in MODULOS %}
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">{{ modulo.titulo }}</a>
-						<div class="dropdown-divider"></div>
+						{% for modulo in MODULOS %}
+							<a class="dropdown-item" href="#">{{ modulo.titulo }}</a>
+							<div class="dropdown-divider"></div>
+						{% endfor %}
 					</div>
-					{% endfor %}
 				</li>
 			</ul>
 		</div>

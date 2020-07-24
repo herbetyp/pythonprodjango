@@ -186,6 +186,14 @@ sqlparse = ">=0.2.0"
 
 [[package]]
 category = "main"
+description = "Allows Django models to be ordered and provides a simple admin interface for reordering them."
+name = "django-ordered-model"
+optional = false
+python-versions = "*"
+version = "3.4.1"
+
+[[package]]
+category = "main"
 description = "Quick extension of django-storages' S3BotoStorage to allow separate folders for uploaded and static media within an S3 bucket."
 name = "django-s3-folder-storage"
 optional = false
@@ -617,7 +625,7 @@ python-versions = "*"
 version = "0.2.5"
 
 [metadata]
-content-hash = "5897ee3419e77fb0cf25f4de8e2a840e9ec1b9dc3a797301b3e401defd578f1c"
+content-hash = "87f217a65601d30b3612dcfdb631823aecec4f89415d71ca6b55c9de5a3fcdaf"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -722,6 +730,10 @@ django = [
 django-debug-toolbar = [
     {file = "django-debug-toolbar-2.2.tar.gz", hash = "sha256:eabbefe89881bbe4ca7c980ff102e3c35c8e8ad6eb725041f538988f2f39a943"},
     {file = "django_debug_toolbar-2.2-py3-none-any.whl", hash = "sha256:ff94725e7aae74b133d0599b9bf89bd4eb8f5d2c964106e61d11750228c8774c"},
+]
+django-ordered-model = [
+    {file = "django-ordered-model-3.4.1.tar.gz", hash = "sha256:d867166ed4dd12501139e119cbbc5b4d19798a3e72740aef0af4879ba97102cf"},
+    {file = "django_ordered_model-3.4.1-py3-none-any.whl", hash = "sha256:29af6624cf3505daaf0df00e2df1d0726dd777b95e08f304d5ad0264092aa934"},
 ]
 django-s3-folder-storage = [
     {file = "django-s3-folder-storage-0.5.tar.gz", hash = "sha256:eb5fd3994726f5b87ddc0ea1a6f1af3f598f9d743127c27d6dae111d18a79abe"},
