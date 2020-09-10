@@ -4,4 +4,7 @@ from pypro.modulos import views
 
 app_name = 'modulos'
 
-urlpatterns = [path('<slug:slug>', views.detalhes, name='detalhe')]
+urlpatterns = [
+    path('<slug:slug>', views.detalhes, name='detalhe'),
+    path('aulas/<slug:slug>', views.aula, name='aula'),
+]
