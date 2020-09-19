@@ -16,6 +16,8 @@ django-s3-folder-storage = "^0.5"
 collectfast = "^2.2.0"
 sentry-sdk = "^0.16.2"
 django-ordered-model = "^3.4.1"
+ipython = "^7.18.1"
+django-extensions = "^3.0.9"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.3"
