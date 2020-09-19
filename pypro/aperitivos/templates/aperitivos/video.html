@@ -6,19 +6,16 @@
 {% block description %}Página com vídeo gratuito de Python{% endblock description %}
 
 {% block content %}
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>{{ video.titulo|default:'Faltando o título' }}</h1>
-                <div class="mt-3 mb-5">
-                    <iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}" width="640" height="360" frameborder="0"
-                        allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div>
-                <a href="{% url 'aperitivos:indice' %}"><button class="btn btn-secondary">Voltar</button></a>
-            </div>
-        </div>
-    </div>
-
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>{{ video.titulo|default:'Faltando o título' }}</h1>
+				<div class="mt-3 mb-5">
+					<iframe src="https://player.vimeo.com/video/{{ video.vimeo_id }}" width="640" height="360" frameborder="0"
+						allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+				<a href="{% url 'aperitivos:indice' %}"><button class="btn btn-secondary">Voltar</button></a>
+			</div>
+		</div>
+	</div>
 {% endblock content %}
-
