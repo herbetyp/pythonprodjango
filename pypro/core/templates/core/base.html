@@ -20,11 +20,9 @@
 	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'js/scripts.js' %}"></script>
-
 </head>
 
 <body>
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="{% url 'core:home' %}">Python Pro</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -54,5 +52,4 @@
 
 	{% include 'core/footer.html' with contato_email='ramalho@python.pro.br' only %}
 </body>
-
 </html>
