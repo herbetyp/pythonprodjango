@@ -20,4 +20,4 @@ def listar_aulas_de_modulo_ordenadas(modulo: Modulo):
 
 
 def encontrar_aula(slug):
-    return Aula.objects.get(slug=slug)
+    return Aula.objects.select_related().get(slug=slug)
