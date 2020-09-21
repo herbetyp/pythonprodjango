@@ -15,4 +15,5 @@ def aula(request, slug):
 
 
 def indice(request):
-    return render(request, 'modulos/indice.html')
+    cxt = {'modulos': facade.listar_modulos_com_aulas()}
+    return render(request, 'modulos/indice.html', cxt)
