@@ -44,11 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
+    'ordered_model',
+    'django_extensions',
     'pypro.core',
     'pypro.aperitivos',
     'pypro.modulos',
-    'ordered_model',
-    'django_extensions',
+    'pypro.turmas',
 ]
 
 MIDDLEWARE = [
