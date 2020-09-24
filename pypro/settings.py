@@ -16,6 +16,7 @@ import dj_database_url
 import sentry_sdk
 from decouple import config
 from decouple import Csv
+from django.urls import reverse_lazy
 from sentry_sdk.integrations.django import DjangoIntegration
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -123,6 +124,8 @@ USE_TZ = True
 
 # Custom User
 AUTH_USER_MODEL = 'core.User'
+
+LOGIN_REDIRECT_URL = reverse_lazy('modulos:indice')
 
 # Debug toolbar configuration
 if DEBUG:
