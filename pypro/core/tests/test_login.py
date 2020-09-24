@@ -31,3 +31,6 @@ def test_login_form_page(resp):
 def test_login_redirect(resp_post):
     assert resp_post.status_code == 302
     assert resp_post.url == reverse('modulos:indice')
+    
+def test_login_form_page(resp):
+    assert resp.status_code == 200
