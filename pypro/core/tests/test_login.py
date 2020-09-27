@@ -68,3 +68,7 @@ def test_btn_login_exit_available(resp_home_with_user_logged):
 
 def test_username_logged_available(resp_home_with_user_logged, user_logged):
     assert_contains(resp_home_with_user_logged, user_logged.first_name)
+
+
+def test_link_logout_available(resp_home_with_user_logged):
+    assert_contains(resp_home_with_user_logged, reverse('logout'))

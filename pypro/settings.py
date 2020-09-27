@@ -126,6 +126,7 @@ USE_TZ = True
 AUTH_USER_MODEL = 'core.User'
 
 LOGIN_REDIRECT_URL = reverse_lazy('modulos:indice')
+LOGOUT_REDIRECT_URL = reverse_lazy('core:home')
 
 # Debug toolbar configuration
 if DEBUG:
