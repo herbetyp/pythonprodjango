@@ -60,3 +60,11 @@ def test_link_login_in_home_unavailable(resp_home_with_user_logged):
 
 def test_btn_login_in_home_unavailable(resp_home_with_user_logged):
     assert_not_contains(resp_home_with_user_logged, 'Entrar')
+
+
+def test_btn_login_exit_available(resp_home_with_user_logged):
+    assert_contains(resp_home_with_user_logged, 'Sair')
+
+
+def test_username_logged_available(resp_home_with_user_logged, user_logged):
+    assert_contains(resp_home_with_user_logged, user_logged.first_name)
