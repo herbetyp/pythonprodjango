@@ -125,6 +125,7 @@ USE_TZ = True
 # Custom User
 AUTH_USER_MODEL = 'core.User'
 
+LOGIN_URL = reverse_lazy('login')
 LOGIN_REDIRECT_URL = reverse_lazy('modulos:indice')
 LOGOUT_REDIRECT_URL = reverse_lazy('core:home')
 
