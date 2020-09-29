@@ -38,6 +38,10 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    'pypro.core',
+    'pypro.aperitivos',
+    'pypro.modulos',
+    'pypro.turmas',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,10 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ordered_model',
     'django_extensions',
-    'pypro.core',
-    'pypro.aperitivos',
-    'pypro.modulos',
-    'pypro.turmas',
 ]
 
 MIDDLEWARE = [
