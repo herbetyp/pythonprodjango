@@ -129,6 +129,14 @@ LOGIN_URL = reverse_lazy('login')
 LOGIN_REDIRECT_URL = reverse_lazy('modulos:indice')
 LOGOUT_REDIRECT_URL = reverse_lazy('core:home')
 
+# Configs Email
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+MAIL_USE_TLS = config('MAIL_USE_TLS')
+
 # Debug toolbar configuration
 if DEBUG:
     INSTALLED_APPS.append('debug_toolbar')
