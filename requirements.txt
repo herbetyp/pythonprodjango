@@ -39,9 +39,9 @@ django-ordered-model==3.4.1 \
     --hash=sha256:29af6624cf3505daaf0df00e2df1d0726dd777b95e08f304d5ad0264092aa934
 django-s3-folder-storage==0.5 \
     --hash=sha256:eb5fd3994726f5b87ddc0ea1a6f1af3f598f9d743127c27d6dae111d18a79abe
-django-storages==1.10.1 \
-    --hash=sha256:652275ab7844538c462b62810276c0244866f345878256a9e0e86f5b1283ae18 \
-    --hash=sha256:12de8fb2605b9b57bfaf54b075280d7cbb3b3ee1ca4bc9b9add147af87fe3a2c
+django-storages==1.11 \
+    --hash=sha256:056ec3e9e2b0c6f363913976072ffba2923e79e4859578047da139ba1637497e \
+    --hash=sha256:7af56611c62a1c174aab4e862efb7fdd98296dccf76f42135f5b6851fc313c97
 gunicorn==20.0.4 \
     --hash=sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c \
     --hash=sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626
