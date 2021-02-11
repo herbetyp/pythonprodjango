@@ -1,21 +1,24 @@
 from django.conf import settings
-from django.contrib import admin, messages
+from django.contrib import admin
+from django.contrib import messages
 from django.contrib.admin.options import IS_POPUP_VAR
 from django.contrib.admin.utils import unquote
 from django.contrib.auth import update_session_auth_hash
-from django.contrib.auth.forms import (
-    AdminPasswordChangeForm,
-    UserChangeForm,
-    UserCreationForm,
-)
+from django.contrib.auth.forms import AdminPasswordChangeForm
+from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import PermissionDenied
-from django.db import router, transaction
-from django.http import Http404, HttpResponseRedirect
+from django.db import router
+from django.db import transaction
+from django.http import Http404
+from django.http import HttpResponseRedirect
 from django.template.response import TemplateResponse
-from django.urls import path, reverse
+from django.urls import path
+from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.utils.html import escape
-from django.utils.translation import gettext, gettext_lazy as _
+from django.utils.translation import gettext
+from django.utils.translation import gettext_lazy as _
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 
@@ -31,29 +34,10 @@ class UserAdmin(admin.ModelAdmin):
     change_user_password_template = None
     fieldsets = (
         (None, {'fields': ('first_name', 'email', 'password')}),
-        (
-            _('Permissions'),
-            {
-                'fields': (
-                    'is_active',
-                    'is_staff',
-                    'is_superuser',
-                    'groups',
-                    'user_permissions',
-                ),
-            },
-        ),
+        (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions',),},),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )
-    add_fieldsets = (
-        (
-            None,
-            {
-                'classes': ('wide',),
-                'fields': ('first_name', 'email', 'password1', 'password2'),
-            },
-        ),
-    )
+    add_fieldsets = ((None, {'classes': ('wide',), 'fields': ('first_name', 'email', 'password1', 'password2'),},),)
     form = UserChangeForm
     add_form = UserCreationForm
     change_password_form = AdminPasswordChangeForm
@@ -92,9 +76,7 @@ class UserAdmin(admin.ModelAdmin):
 
     def lookup_allowed(self, lookup, value):
         # Don't allow lookups involving passwords.
-        return not lookup.startswith('password') and super().lookup_allowed(
-            lookup, value
-        )
+        return not lookup.startswith('password') and super().lookup_allowed(lookup, value)
 
     @sensitive_post_parameters_m
     @csrf_protect_m
@@ -151,12 +133,7 @@ class UserAdmin(admin.ModelAdmin):
                 update_session_auth_hash(request, form.user)
                 return HttpResponseRedirect(
                     reverse(
-                        '%s:%s_%s_change'
-                        % (
-                            self.admin_site.name,
-                            user._meta.app_label,
-                            user._meta.model_name,
-                        ),
+                        '%s:%s_%s_change' % (self.admin_site.name, user._meta.app_label, user._meta.model_name,),
                         args=(user.pk,),
                     )
                 )
@@ -187,10 +164,7 @@ class UserAdmin(admin.ModelAdmin):
         request.current_app = self.admin_site.name
 
         return TemplateResponse(
-            request,
-            self.change_user_password_template
-            or 'admin/auth/user/change_password.html',
-            context,
+            request, self.change_user_password_template or 'admin/auth/user/change_password.html', context,
         )
 
     def response_add(self, request, obj, post_url_continue=None):
