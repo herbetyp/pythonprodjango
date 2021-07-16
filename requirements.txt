@@ -10,9 +10,9 @@ backcall==0.2.0 \
 boto3==1.15.1 \
     --hash=sha256:888be45e289ba56c4e47cfae5d6b08f097bc981d077fbe6521a6d3dc7a4d757e \
     --hash=sha256:44073b1b1823ffc9edcf9027afbca908dad6bd5000f512ca73f929f6a604ae24
-botocore==1.18.1 \
-    --hash=sha256:d6bdf51c8880aa9974e6b61d2f7d9d1debe407287e2e9e60f36c789fe8ba6790 \
-    --hash=sha256:6bdf60281c2e80360fe904851a1a07df3dcfe066fe88dc7fba2b5e626ac05c8c
+botocore==1.21.0 \
+    --hash=sha256:0d46f0addc1d7930c42115a814e5e0c3399666f6d11c1e58d9ec726dfed02ada \
+    --hash=sha256:84ea51660c758416f75ac612374156f6423a1d1ade449d38944de6eb8493cca2
 certifi==2020.6.20 \
     --hash=sha256:8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41 \
     --hash=sha256:5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3
